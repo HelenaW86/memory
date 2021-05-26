@@ -144,7 +144,7 @@
             }
             
             .game {
-                height: 85vh;
+                height: 80vh;
                 width: 100%;
                 position: relative;
                 margin: 0 auto;
@@ -395,7 +395,7 @@
                     time = Math.floor( time - difference );
                     $('.timer').text( time );
                 }else if (win) {
-                    clearInterval(timer);
+                    clearIntervall(timer);
                 }else{
                     outOfTime = true;
                     alert("Tiden är ute");
