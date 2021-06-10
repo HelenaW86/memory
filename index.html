@@ -288,7 +288,7 @@
     var countdownStarted = false;
     var win = false;
     var pairCount = 0;
-    var time = 60;
+    var time = 150;
     
     shuffleArray(pairs);
     
@@ -385,15 +385,15 @@
         }
         function countdown () {
             countdownStarted = true;
-            var timeStart = +new Date;
+            var timeStart =+ new Date;
             var timer = setInterval( function() {
-                var timeNow = +new Date;
+                var timeNow =+ new Date;
                 var difference = ( timeNow - timeStart ) / 1000;
                 
                 if (time > 0 && !win) {
                     time = 60;
-                    time = Math.floor( time - difference );
-                    $('.timer').text( time );
+                    time = Math.floor(time - difference);
+                    $('.timer').text(time);
                 }else if (win) {
                     clearIntervall(timer);
                 }else{
